@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おみくじ練習</title>
+</head>
+
+<body>
+  <script>
+    const randomNumber = Math.floor(Math.random() * 5);
+
+    //何処を間違っているかを探す（デバック）コンストやアラートを使う
+    console.log(randomNumber);
+
+    if (randomNumber == 0) {
+      // 条件式1を満たす場合の処理
+      alert('大吉');
+    } else if (randomNumber == 1) {
+      // 条件式1と満たさなくて条件式2を満たす場合の処理
+      alert('中吉');
+    } else if (randomNumber == 2) {
+      // 条件式1と満たさなくて条件式2を満たす場合の処理
+      alert('吉');
+    } else if (randomNumber == 3) {
+      // 条件式1と満たさなくて条件式2を満たす場合の処理
+      alert('凶');
+    } else if (randomNumber == 4) {
+      // 条件式1と満たさなくて条件式2を満たす場合の処理
+      alert('大凶');
+    } else {
+      // いずれの条件も満たさない場合の処理
+      alert('エラー');
+    }
+
+
+  </script>
+</body>
+
+</html>

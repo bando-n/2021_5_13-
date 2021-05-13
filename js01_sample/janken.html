@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/sample.css">
+  <title>じゃんけん</title>
+</head>
+
+<body>
+  <header>
+    <h1>じゃんけん</h1>
+  </header>
+
+  <main>
+    <ul>
+      <li id="gu_btn">グー</li>
+      <li id="cho_btn">チョキ</li>
+      <li id="par_btn">パー</li>
+    </ul>
+    <div id="com_hand">コンピュータの出した手は？</div>
+    <div id="result">結果は？</div>
+  </main>
+
+  <footer class="footer_box">Jan Ken</footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    //ここに処理を追加
+    $('#gu_btn').on('click', function () {
+      const randomNumber = Math.floor(Math.random() * 15);
+      if (randomNumber === 0) {
+        $('#com_hand').text('グー');
+        $('#result').text('Draw');
+      } if (randomNumber === 1) {
+        $('#com_hand').text('グー');
+        $('#result').text('Draw');
+      } if (randomNumber === 2) {
+        $('#com_hand').text('グー');
+        $('#result').text('Draw');
+      } if (randomNumber === 3) {
+        $('#com_hand').text('グー');
+        $('#result').text('Draw');
+      } if (randomNumber === 4) {
+        $('#com_hand').text('グー');
+        $('#result').text('Draw');
+      }
+      else if (randomNumber === 5) {
+        $('#com_hand').text('チョキ');
+        $('#result').text('win');
+      }
+      else if (randomNumber === 6) {
+        $('#com_hand').text('チョキ');
+        $('#result').text('win');
+      } else if (randomNumber === 7) {
+        $('#com_hand').text('チョキ');
+        $('#result').text('win');
+      } else if (randomNumber === 8) {
+        $('#com_hand').text('チョキ');
+        $('#result').text('win');
+      } else if (randomNumber === 9) {
+        $('#com_hand').text('チョキ');
+        $('#result').text('win');
+      }
+      else if (randomNumber === 10) {
+        $('#com_hand').text('パー');
+        $('#result').text('lose');
+      }
+      else if (randomNumber === 11) {
+        $('#com_hand').text('パー');
+        $('#result').text('lose');
+      } else if (randomNumber === 12) {
+        $('#com_hand').text('パー');
+        $('#result').text('lose');
+      } else if (randomNumber === 13) {
+        $('#com_hand').text('パー');
+        $('#result').text('lose');
+      } else if (randomNumber === 14) {
+        $('#com_hand').text('パー');
+        $('#result').text('lose');
+      }
+      else {
+        $('#com_hand').text('大吉');
+        $('#result').text('ラッキー');
+      }
+    });
+    $('#cho_btn').on('click', function () {
+      const randomNumber = Math.floor(Math.random() * 3);
+      if (randomNumber === 0) {
+        $('#com_hand').text('チョキ');
+        $('#result').text('Draw');
+      } else if (randomNumber === 1) {
+        $('#com_hand').text('パー');
+        $('#result').text('win');
+      } else if (randomNumber === 2) {
+        $('#com_hand').text('グー');
+        $('#result').text('lose');
+      } else {
+        alert('error');
+      }
+    });
+    $('#par_btn').on('click', function () {
+      const randomNumber = Math.floor(Math.random() * 3);
+      if (randomNumber === 0) {
+        $('#com_hand').text('パー');
+        $('#result').text('Draw');
+      } else if (randomNumber === 1) {
+        $('#com_hand').text('グー');
+        $('#result').text('win');
+      } else if (randomNumber === 2) {
+        $('#com_hand').text('チョキ');
+        $('#result').text('lose');
+      } else {
+        alert('error');
+      }
+    });
+  </script>
+
+
+</body>
+
+</html>

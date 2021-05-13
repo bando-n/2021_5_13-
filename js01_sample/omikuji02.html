@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/sample.css">
+  <title>おみくじ</title>
+</head>
+
+<body>
+  <header>
+    <h1>おみくじ</h1>
+  </header>
+
+  <main>
+    <ul>
+      <li id="pull">おみくじを引く</li>
+    </ul>
+    <p id="echo">結果は？</p>
+  </main>
+
+  <footer>フッター</footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+
+    $('#pull').on('click', function () {
+      const randomNumber = Math.floor(Math.random() * 5);
+      // ＃はID
+      //jQueryセレクタ（どこを）
+      //jQueryイベント（いつ）でググる
+
+      // 0から4でランダムな数を作成
+      // 0だったら大吉,1だったら中吉...
+      // 結果をidで指定した場所に表示
+      if (randomNumber == 0) {
+        // 条件式1を満たす場合の処理
+        $('#echo').html('大吉');
+        alert('大吉')
+      } else if (randomNumber == 1) {
+        // 条件式1と満たさなくて条件式2を満たす場合の処理
+        // alert('中吉')
+        $('#echo').html('中吉');
+      } else if (randomNumber == 2) {
+        // 条件式1と満たさなくて条件式2を満たす場合の処理
+        // alert('吉')
+        $('#echo').html('吉');
+      } else if (randomNumber == 3) {
+        // 条件式1と満たさなくて条件式2を満たす場合の処理
+        // alert('凶')
+        $('#echo').html('凶');
+      } else if (randomNumber == 4) {
+        // 条件式1と満たさなくて条件式2を満たす場合の処理
+        // alert('大凶')
+        $('#echo').html('大凶');
+      } else {
+        // いずれの条件も満たさない場合の処理
+        // alert('エラー')
+        $('#echo').html('エラー');
+      }
+    });
+  </script>
+
+</body>
+
+</html>

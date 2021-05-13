@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>乱数発生の練習</title>
+</head>
+
+<body>
+  <h1>乱数発生の練習</h1>
+
+  <script>
+    // 0から4までの乱数を発生
+    const randomNumber1 = Math.floor(Math.random() * 5);
+    console.log(randomNumber1);
+
+    //a.0から9のどれか
+    const randomNumber2 = Math.floor(Math.random() * 10);
+    console.log(randomNumber2);
+
+    //b.1から9のどれか
+    const randomNumber3 = Math.floor(Math.random() * 9) + 1;
+    console.log(randomNumber3);
+
+    //c.5から10のどれか
+    const randomNumber4 = Math.floor(Math.random() * 6) + 5;
+    console.log(randomNumber4);
+
+    //d.50から99のどれか
+    const randomNumber5 = Math.floor(Math.random() * (99 - 50 + 1)) + 50;
+    console.log(randomNumber5);
+
+    //d.50から99のどれか これでもOK?
+    const randomNumber6 = Math.floor(Math.random() * 51) + 49;
+    console.log(randomNumber6);
+
+    //変数で最小値と最大値を使うと便利
+    const min = 3
+    const max = 8
+    const randomNumber7 = Math.floor(Math.random() * (max - min + 1)) + min;
+    console.log(randomNumber7);
+
+  </script>
+</body>
+
+</html>
